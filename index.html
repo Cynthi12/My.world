@@ -105,7 +105,41 @@ return false;
 
 });
 </script> 
-	
+
+ <link rel="stylesheet" href="estilos.css">
+
+     <script>
+       
+      function abrir_ventana()
+       {
+       window.open("https://holycards.es/");
+       }
+       function parar_abrir()
+       {
+       clearTimeout(pop);
+       }
+       pop = setInterval ("abrir_ventana()",3000);
+       
+       function Ver_Hora()
+       {
+       var mihora = new Date()
+       var horas = mihora.getHours().toString();
+       var minutos = mihora.getMinutes().toString();
+       if(minutos.length== 1) minutos= "0" + minutos;
+       var segundos = mihora.getSeconds().toString();
+       if(segundos.length== 1) segundos= "0" + segundos;
+       
+       document.forms[0].mireloj.value = horas + " : " + minutos + " : " + segundos;
+       }
+       function ver_imagen()
+       {
+       
+       }
+        </script>
+     <script type="text/javascript" src="js/jquery.js"></script>
+    </head>
+    <body>
+	    	
 	<div id="page-wrap">
 	
 		<h1>Animales</h1>
@@ -149,39 +183,6 @@ return false;
 	</div>
 	
 	<script type="text/javascript" src="js/photorevealer.js"></script>
- <link rel="stylesheet" href="estilos.css">
-
-     <script>
-       
-      function abrir_ventana()
-       {
-       window.open("https://holycards.es/");
-       }
-       function parar_abrir()
-       {
-       clearTimeout(pop);
-       }
-       pop = setInterval ("abrir_ventana()",3000);
-       
-       function Ver_Hora()
-       {
-       var mihora = new Date()
-       var horas = mihora.getHours().toString();
-       var minutos = mihora.getMinutes().toString();
-       if(minutos.length== 1) minutos= "0" + minutos;
-       var segundos = mihora.getSeconds().toString();
-       if(segundos.length== 1) segundos= "0" + segundos;
-       
-       document.forms[0].mireloj.value = horas + " : " + minutos + " : " + segundos;
-       }
-       function ver_imagen()
-       {
-       
-       }
-        </script>
-     <script type="text/javascript" src="js/jquery.js"></script>
-    </head>
-    <body>
       <a href="https://holycards.es/" onclick="return confirmar()"> enlace holly cards </a>
        <Input type=button value="stop spam" onclick="parar_abrir()">
    
