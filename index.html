@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Derivado de "Proyecto: página web"</title>
+        <script language= "JavaScript"> alert("¡¡Bienvenidos!!") </script>
+        <input type=button value=Atrás onclick="history.go(-1)">
+       <script language= "JavaScript"> var nom;
+       nom=prompt("Escribe tu nombre", "Nombre"); alert("Mucho gusto " + nom) </script>
+   <script language= "JavaScript"> function confirmar()
+          {
+         return confirm ("Esta página contiene contenido para mayor de 18 años. ¿Lo cumples?")
+         } 
+       
+   function ver_imagen()
+       {
+       if (!document.images)
+       return
+document.images.src=
+document.images.imagen.option[doucment.imagenes.imagen.selectedIndex].value
+       }
+
+
+$(document).ready(function(){
+
+$('.photo_slider').each(function(){
+
+var $this = $(this).addClass('photo-area');
+var $img = $this.find('img');
+var $info = $this.find('.info_area');
+
+var opts = {};
+
+$img.ready(function(){
+opts.imgw = $img.width();
+opts.imgh = $img.height();
+});
+
+opts.orgw = $this.width();
+opts.orgh =  $this.height();
+
+$img.css ({
+marginLeft: "-150px",
+marginTop: "-150px"
+});
+
+var $wrap = $('<div class="photo_slider_img">').append($img).prependTo($this);
+
+var $open = $('<a href="#" class="more_info">More Info &gt;</a>').appendTo($this);
+
+var $close = $('<a class="close">Close</a>').appendTo($info);
+
+opts.wrapw = $wrap.width();
+opts.wraph = $wrap.height();
+
+$open.click(function(){
+$this.animate({
+width: opts.imgw,
+height: (opts.imgh+95),
+borderWidth: "10"
+
+}, 600 );
+
+$open.fadeOut();
+
+$wrap.animate({
+   width: opts.imgw,
+height: opts.imgh
+}, 600 );
+
+$(".info_area",$this).fadeIn();
+
+$img.animate({
+marginTop: "0px",
+marginLeft: "0px"
+}, 600 );
+
+return false;
+});
+
+$close.click(function(){
+$this.animate({
+width: opts.orgw,
+height: opts.orgh,
+       borderWidth: "1"
+     }, 600 );
+
+$open.fadeIn();
+
+$wrap.animate({
+       width: opts.wrapw,
+height: opts.wraph
+     }, 600 );
+
+$img.animate({
+marginTop: "-150px",
+marginLeft: "-150px"
+}, 600 );
+
+$(".info_area",$this).fadeOut();
+return false;
+});
+
+});
+
+});
+</script> 
+ <link rel="stylesheet" href="CSS/Estilos.css">
+
+     <script>
+       
+      function abrir_ventana()
+       {
+       window.open("https://holycards.es/");
+       }
+       function parar_abrir()
+       {
+       clearTimeout(pop);
+       }
+       pop = setInterval ("abrir_ventana()",3000);
+       
+       function Ver_Hora()
+       {
+       var mihora = new Date()
+       var horas = mihora.getHours().toString();
+       var minutos = mihora.getMinutes().toString();
+       if(minutos.length== 1) minutos= "0" + minutos;
+       var segundos = mihora.getSeconds().toString();
+       if(segundos.length== 1) segundos= "0" + segundos;
+       
+       document.forms[0].mireloj.value = horas + " : " + minutos + " : " + segundos;
+       }
+       function ver_imagen()
+       {
+       
+       }
+        </script>
+     
+    </head>
+    <body>
+      <a href="https://holycards.es/" onclick="return confirmar()"> enlace holly cards </a>
+       <Input type=button value="stop spam" onclick="parar_abrir()">
+   
+       <form>
+       <p align="center">
+       <input type="text" size="10" name="mireloj">
+       </p>
+       </form>
+       <script>
+       var r= setInterval ("Ver_Hora()" ,500);
+       </script>
+
+ 
+    </head>
+   
+    <script languaje="javascript">
+            function mailpage()
+                {
+                    mail_str="mailto:nombre@dominio.com?subject=Ejemplo: " + document.title;
+                    mail_str += "&body= VVisita esto (https://css-tricks.com/revealing-photo-slider/) -- "
+                    + document.title;
+                    mail_str += ". Enlace: " + location.href;
+                    location.href = mail_str;
+                }
+        </script>
+        <a href="javascript:mailpage()"> Mandar correo!</a>
+       <h1 id="summer">SEMANA SANTA SEVILLA</h1>
+       <img alt src="Images/375px-SemanaSantaSevillaLaHiniesta02.JPG" width="200" height="150">
+    
+    
+<p> La Semana Santa es la fiesta grande de Sevilla. Una celebración que alcanza una intensidad, tanto estética como espiritual, única en su estilo. Declarada Fiesta de interés turístico Internacional.
+Entre el Domingo de Ramos y el de Resurrección salen a la calle cerca de sesenta cofradías que dan vida a la pasión y muerte de Cristo. Es de gran tradición que a las distintas cofradías, en diferentes partes del recorrido, se les cante un palo del flamenco llamado saeta.</p>
+       <h2 id="sofi">Cofradias más conocidas</h2>
+        <img alt src="Images/El_Señor_de_las_Tres_Caídas,_frente_a_la_Capilla_de_la_Estrella,_en_pleno_corazón_de_Triana.JPG" width="200" height="150">
+    
+        <p>  </p>
+                    <ul>
+            <li><strong>El Gran Poder</strong></li>
+             <li><strong>La Macarena</strong></li>
+             <li><strong>La Esperanza de Triana</strong></li>
+             <li><strong>El cachorro</strong></li>
+        </ul>
+        
+         <h2 id="winter">Comida típica de Semana Santa</h2>
+        <img alt src="Images/Torrijas-2.jpg" width="200" height="150">
+        
+       <p> Entre los dulces de Semana Santa sevillana más destacados, encontramos las torrijas, los pestiños, las yemas y las empanadillas de cabello de ángel. Estos postres son una muestra de la rica tradición repostera de la ciudad y son elaborados con ingredientes típicos de la zona, como la miel, el aceite de oliva, el vino o la canela.</p>
+                 <ul>
+                
+            <li><strong>Las torrijas</strong></li>
+             <li><strong>Los pestiños</strong></li>
+             <li><strong>las empanadillas de cabello de ángel</strong></li>
+             <li><strong>Las yemas</strong></li>
+        </ul>
+        <table>
+  <tr>
+    <td>&nbsp;</td>
+    <td>Raquel</td>
+    <td>Javi</td>
+    <td>Antonio</td>
+    <td>Cynthia</td>
+  </tr>
+  <tr>
+    <td>País</td>
+    <td>Colombia</td>
+    <td>España</td>
+    <td>España</td>
+    <td>España</td>
+  </tr>
+  <tr>
+    <td>Edad</td>
+    <td>17</td>
+    <td>17</td>
+    <td>17</td>
+    <td>17</td>
+  </tr>
+  <tr>
+    <td>Torrijas</td>
+    <td>Sí</td>
+    <td>Sí</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+</table>
+
+    </body>
+</html>
