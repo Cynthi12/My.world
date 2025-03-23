@@ -25,7 +25,7 @@ body {
 #photo {
 	width: 100px;
 	height: 100px;
-	background: url(delfin.jpg) center center;
+	background: url(343px-Delfín.jpg) center center;
 	margin-bottom: 5px;
 }
 .info-area {
@@ -35,7 +35,7 @@ body {
 		display: block;
 		width: 89px;
 		height: 26px;
-		background: url(pollito.jpg);
+		background: url(istockphoto-1469253548-612x612.jpg);
 		text-indent: -9999px;
 	}
 	a.close {
@@ -45,6 +45,6 @@ body {
 		display: block;
 		width: 20px;
 		height: 21px;
-		background: url(cabra.jpg);
+		background: url(photo-1507184915978-447ac6ab3ecb.jpg);
 		text-indent: -9999px;
 	}
